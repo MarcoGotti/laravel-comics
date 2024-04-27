@@ -1,3 +1,134 @@
+/* #region Common */
+:root {
+    --dc-dark: #1d1c1d;
+    --dc-light: white;
+    --dc-primary: #0c7dedff;
+    --dc-secondary: #313130;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: blue;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--dc-dark);
+    color: var(--dc-light);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+/* #endregion Common */
+
+header {
+    background-color: var(--dc-light);
+
+    #top-line {
+        background-color: var(--dc-primary);
+        height: 20px;
+
+        .top-line-container {
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            .top-banners {
+                text-transform: uppercase;
+                font-size: 10px;
+
+                & span {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    #header-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+
+        & .logo > img {
+            width: 70px;
+        }
+
+        & ul {
+            display: flex;
+            gap: 1rem;
+            text-transform: uppercase;
+            font-size: 12px;
+
+            & > li {
+                padding: 2rem 0;
+                border-bottom: 4px solid transparent;
+
+                & > a {
+                    color: var(--dc-secondary);
+                    font-weight: 600;
+                }
+            }
+
+            & > li:hover {
+                border-bottom: 4px solid var(--dc-primary);
+            }
+        }
+
+        & input[type="text"] {
+            border: none;
+            outline: none;
+            border-bottom: 3px solid var(--dc-primary);
+            text-align: end;
+        }
+    }
+
+    #jumbotron {
+        .jumbotron {
+            height: 320px;
+            background-image: url("../images/jumbotron.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+/* #region Layout */
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class^="col-"] {
+    padding: 1rem;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col {
+    width: auto;
+    flex-basis: auto;
+    padding: 1rem;
+}
+/* #endregion Layout */
+
+/* Utilities */
+
+.list-unstyled {
+    list-style: none;
 }
