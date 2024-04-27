@@ -20,6 +20,7 @@ body {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 a {
@@ -101,6 +102,47 @@ header {
     }
 }
 
+main {
+    .comics {
+        text-transform: uppercase;
+
+        & h3 {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--dc-primary);
+            margin: -2rem 0 0.5rem;
+        }
+
+        .card {
+            .thumb {
+                overflow: hidden;
+                height: 180px;
+            }
+            .series {
+                font-size: 12px;
+            }
+            & > img {
+                /* aspect-ratio: 1; */
+                /* object-fit: cover; */
+                /* object-position: top; */
+            }
+        }
+
+        .loadmore {
+            text-align: center;
+            margin: 2rem 0 1rem;
+
+            & button {
+                background-color: var(--dc-primary);
+                color: var(--dc-light);
+                padding: 0.5rem 2rem;
+                border-style: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
 /* #region Layout */
 .container {
     width: 70%;
@@ -116,8 +158,8 @@ header {
     padding: 1rem;
 }
 
-.col-12 {
-    width: 100%;
+.col-2 {
+    width: calc(100% / 12 * 2);
 }
 
 .col {
