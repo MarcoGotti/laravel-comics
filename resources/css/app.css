@@ -103,7 +103,7 @@ header {
 }
 
 main {
-    .comics {
+    #comics {
         text-transform: uppercase;
 
         & h3 {
@@ -138,6 +138,33 @@ main {
                 padding: 0.5rem 2rem;
                 border-style: none;
                 text-transform: uppercase;
+            }
+        }
+    }
+
+    #banners {
+        .banner {
+            background-color: var(--dc-primary);
+            padding: 2rem 0;
+
+            & > .container {
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            & .item {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    height: 60px;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
             }
         }
     }
