@@ -27,7 +27,7 @@ a {
     text-decoration: none;
 }
 /* #endregion Common */
-
+/* #region header main footer */
 header {
     background-color: var(--dc-light);
 
@@ -143,6 +143,56 @@ main {
     }
 }
 
+footer {
+    & > .top {
+        background-image: url("../images/dc-logo-bg.png"),
+            url("../images/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 600px, cover;
+        background-position: 80%, top;
+        padding-bottom: 2rem;
+
+        & h4 {
+            color: var(--dc-light);
+            margin: 1.5rem 0;
+            text-transform: uppercase;
+        }
+
+        & ul a {
+            color: gray;
+            line-height: 1.5rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    & > .bottom {
+        padding: 1.5rem 0;
+
+        & .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        & .signup {
+            border: 1px solid var(--dc-primary);
+            padding: 0.75rem;
+            color: var(--dc-light);
+            text-transform: uppercase;
+        }
+        & .social {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            & strong {
+                text-transform: uppercase;
+                color: var(--dc-primary);
+            }
+        }
+    }
+}
+/* #endregion header main footer */
 /* #region Layout */
 .container {
     width: 70%;
@@ -160,6 +210,10 @@ main {
 
 .col-2 {
     width: calc(100% / 12 * 2);
+}
+
+.col-12 {
+    width: 100%;
 }
 
 .col {

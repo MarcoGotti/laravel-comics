@@ -22,7 +22,11 @@
 
         </main>
 
-        @include ('partials.footer')
+        <footer>
+            @include ('partials.footer-top')
+            @include ('partials.footer-bottom')
+        </footer>
+
         
     </body>
 </html>
