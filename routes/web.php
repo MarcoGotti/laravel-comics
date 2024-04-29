@@ -19,4 +19,12 @@ Route::get('/', function () {
     //dd($comics);
 
     return view('home', compact('comics'));
-});
+})->name('home');
+
+
+Route::get('/action', function () {
+
+    $action_comic = config('comics');
+
+    return view('action', compact('action_comic'));
+})->name('action');

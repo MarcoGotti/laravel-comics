@@ -14,8 +14,6 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: var(--dc-dark);
-    color: var(--dc-light);
 }
 
 img {
@@ -57,7 +55,6 @@ header {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding: 0.5rem 0;
 
         & .logo > img {
             width: 70px;
@@ -68,6 +65,7 @@ header {
             gap: 1rem;
             text-transform: uppercase;
             font-size: 12px;
+            list-style: none;
 
             & > li {
                 padding: 2rem 0;
@@ -105,6 +103,9 @@ header {
 main {
     #comics {
         text-transform: uppercase;
+        background-color: var(--dc-dark);
+        color: var(--dc-light);
+        padding-bottom: 1rem;
 
         & h3 {
             display: inline-block;
@@ -130,7 +131,7 @@ main {
 
         .loadmore {
             text-align: center;
-            margin: 2rem 0 1rem;
+            margin-top: 2rem;
 
             & button {
                 background-color: var(--dc-primary);
@@ -145,6 +146,7 @@ main {
     #banners {
         .banner {
             background-color: var(--dc-primary);
+            color: var(--dc-light);
             padding: 2rem 0;
 
             & > .container {
@@ -166,6 +168,15 @@ main {
                     font-size: 0.8rem;
                 }
             }
+        }
+    }
+
+    #action_page {
+        .top-line {
+            background-color: var(--dc-primary);
+            height: 40px;
+        }
+        .infos {
         }
     }
 }
@@ -226,6 +237,11 @@ footer {
     margin: auto;
 }
 
+.container_action {
+    width: 50%;
+    margin: auto;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -237,6 +253,14 @@ footer {
 
 .col-2 {
     width: calc(100% / 12 * 2);
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col-8 {
+    width: calc(100% / 12 * 8);
 }
 
 .col-12 {
@@ -254,4 +278,13 @@ footer {
 
 .list-unstyled {
     list-style: none;
+}
+
+/* action page */
+
+.action_banner {
+    position: relative;
+    top: -220px;
+    left: calc(25% + 1rem);
+    border: 2px solid white;
 }

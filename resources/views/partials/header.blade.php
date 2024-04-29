@@ -13,8 +13,8 @@
             <img src="{{Vite::asset('resources/images/dc-logo.png')}}" alt="">
           </div>
           <ul>
-            <li><a href="">Characters</a></li>
-            <li><a href="">Comics</a></li>
+              <li><a href="{{route('home')}}">home</a></li>
+              <li><a href="">Characters</a></li>
             <li><a href="">Movies</a></li>
             <li><a href="">TV</a></li>
             <li><a href="">Games</a></li>
