@@ -9,6 +9,13 @@
     </section>
     <section id="header-main" class="container">
         
+        {{-- 
+            {{ Route::currentRouteName() === 'action' ? 
+        '<img class="action_banner" width="150px" src="{{$comic_0['thumb']}}" alt="">' : 
+        ''
+        }}" 
+        --}}
+
           <div class="logo">
             <img src="{{Vite::asset('resources/images/dc-logo.png')}}" alt="">
           </div>

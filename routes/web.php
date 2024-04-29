@@ -24,7 +24,8 @@ Route::get('/', function () {
 
 Route::get('/action', function () {
 
-    $action_comic = config('comics');
+    $comic_0 = config('comics')[0];
+    //dd($action_comic);
 
-    return view('action', compact('action_comic'));
+    return view('action', compact('comic_0'));
 })->name('action');

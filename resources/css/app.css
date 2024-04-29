@@ -176,7 +176,33 @@ main {
             background-color: var(--dc-primary);
             height: 40px;
         }
+
+        .action_banner {
+            position: absolute;
+            top: 240px;
+            left: calc(25% + 1rem);
+            border: 2px solid white;
+            width: 150px;
+        }
+
         .infos {
+            img {
+                margin-top: 1.5rem;
+            }
+            h4 {
+                text-transform: uppercase;
+                color: var(--dc-secondary);
+                padding: 1rem 0;
+            }
+            .stripe {
+                background-color: rgb(1, 154, 1);
+                color: var(--dc-light);
+                padding: 1rem;
+            }
+            .description {
+                padding: 1rem 0;
+                color: var(--dc-secondary);
+            }
         }
     }
 }
@@ -282,10 +308,3 @@ footer {
 }
 
 /* action page */
-
-.action_banner {
-    position: relative;
-    top: -220px;
-    left: calc(25% + 1rem);
-    border: 2px solid white;
-}
